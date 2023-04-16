@@ -11,7 +11,7 @@ Testing
 The main method in the VeracityTechnicalTest class includes some test cases to demonstrate the use of the PerformWordSearchUseCase class. The first test case searches a particular URL, the second test case tests an incorrect URL format, and the third test case tests for empty arguments.
 
 Instructions for Running    
-The command to run : java WebSearchApp.java
+The command to run : java VeracityTechnicalTest.java
 
 Error Handling        
 The code includes several error-handling mechanisms to prevent the program from crashing or producing incorrect results in case of unexpected inputs or errors. Here are some details:
