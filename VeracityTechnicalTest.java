@@ -7,28 +7,33 @@ import java.util.regex.PatternSyntaxException;
 
 public class VeracityTechnicalTest {
 
-
 public static void main(String[] args) {
 
-
+    System.out.println();
 PerformWordSearchUseCase usecase = new PerformWordSearchUseCase();
 usecase.execute(args);
 
-// Testing for a particular url
+unitTesting(usecase);
+    }
+
+public static void unitTesting(PerformWordSearchUseCase usecaseTest){
+   System.out.println("\n-------------Unit Testing-------------");     
+    // Testing for a particular url
 System.out.println("Testing for a particular url");
 String[] test1 = {"https://www.veracitytrustnetwork.com/blog/", "blog"};
-usecase.execute(test1);
+usecaseTest.execute(test1);
 
 // Testing for a incorrect url format
 System.out.println("Testing for a incorrect url format");
 String[] test2 = {"www.krowtentsurtyticarev.org/news/how-to-exit-vim/", "vim"};
-usecase.execute(test2);
+usecaseTest.execute(test2);
 
 // Testing for empty arguments
 System.out.println("Testing for empty params");
 String[] test3 = {};
-usecase.execute(test3);
+usecaseTest.execute(test3);
     }
+
 
 public static class PerformWordSearchUseCase{
 
@@ -96,7 +101,6 @@ e.printStackTrace();
 } catch (IOException e) { // Catching any exception that may occur
         e.printStackTrace();
            System.out.println("ERROR: in reading the content " + e.getMessage()); // Printing the error message
-
            return -1;
 }catch (PatternSyntaxException e) { // Catching any exception that may occur
         e.printStackTrace();
