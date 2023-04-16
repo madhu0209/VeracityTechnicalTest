@@ -12,3 +12,7 @@ The main method in the VeracityTechnicalTest class includes some test cases to d
 
 Conclusion     
 This program provides a simple way to search for a target word in a given URL and count the number of occurrences. It demonstrates the use of interfaces and implementation classes to abstract away implementation details, and the use of error handling to gracefully handle unexpected conditions.
+
+Bonus point    
+As for the bonus question, the example may produce either 0 or 122 results depending on whether or not you include the word "blog" that is part of the URL which is given as input. If its been included, it will generate the the result as 122 because the word "blog" appears 122 times in the page content. If its been excluded, it will generate the the result as 0 because the word "blog" does not appear in the page content.
+
