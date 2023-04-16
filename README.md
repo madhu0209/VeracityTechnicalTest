@@ -10,7 +10,8 @@ Syntax: ```java VeracityTechnicalTest.java <url> <word> ```
 The usecase communicates between the main java class (presentation layer) and the domain layer. The usecase decides how the data can be sent to the presentation layer.
 
 ### Domain Layer      
-The domain implementation implements the Domain inetrface. The interface encapsulates the file read operations from the usecase on the prsentation layer.The usecase holds the main buisness logic. The getTargetWordCount method in the DomainImpl class takes two arguments: the URL to search and the target word to count. It returns the number of occurrences of the target word in the URL, or -1 if an error occurs.
+The domain implementation implements the Domain inetrface. The interface encapsulates the file read operations from the usecase on the prsentation layer. the read operations happens in the main thread. The usecase holds the main buisness logic. The getTargetWordCount method in the DomainImpl class takes two arguments: the URL to search and the target word to count. It returns the number of occurrences of the target word in the URL, or -1 if an error occurs.
+> Note: Since the file read operations is happening in the main thread, it can be moved to the background thread. ( Scope for improvisation)
 
 ### Unit Testing    
 The main method in the VeracityTechnicalTest class includes some test cases to demonstrate the use of the PerformWordSearchUseCase class. The first test case searches a particular URL, the second test case tests an incorrect URL format, and the third test case tests for empty arguments.
