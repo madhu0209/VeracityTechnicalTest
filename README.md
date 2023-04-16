@@ -1,5 +1,10 @@
 # VeracityTechnicalTest
-This program performs a word search in a given URL and counts the number of occurrences of a target word. It uses the java.io and java.net packages to read the contents of the URL.
+This program performs a word search in a given URL and counts the number of occurrences of a target word. 
+
+Instructions for Run
+Open Command line terminal and execute one of the below command  
+Syntax: ```java VeracityTechnicalTest.java <url> <word> ```     
+         ```java VeracityTechnicalTest.java "https://www.veracitytrustnetwork.com/blog/", "blog" ```
 
 Application Architecture    
 The usecase communicates between the main java class (presentation layer) and the domain layer. The usecase decides how the data can be sent to the presentation layer.
@@ -7,11 +12,9 @@ The usecase communicates between the main java class (presentation layer) and th
 Domain Layer      
 The domain implementation implements the Domain inetrface. The interface encapsulates the file read operations from the usecase on the prsentation layer.The usecase holds the main buisness logic. The getTargetWordCount method in the DomainImpl class takes two arguments: the URL to search and the target word to count. It returns the number of occurrences of the target word in the URL, or -1 if an error occurs.
 
-Testing    
+Unit Testing    
 The main method in the VeracityTechnicalTest class includes some test cases to demonstrate the use of the PerformWordSearchUseCase class. The first test case searches a particular URL, the second test case tests an incorrect URL format, and the third test case tests for empty arguments.
 
-Instructions for Running    
-The command to run : java VeracityTechnicalTest.java
 
 Error Handling        
 The code includes several error-handling mechanisms to prevent the program from crashing or producing incorrect results in case of unexpected inputs or errors. Here are some details:
