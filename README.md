@@ -4,7 +4,7 @@ This program performs a word search in a given URL and counts the number of occu
 The code will also run in command line : 
 
 The command to run 
-java VeracityTechnicalTest.java 
+java VeracityTechnicalTest.java
 
 Usage       
 To use the program, create an instance of the PerformWordSearchUseCase class and call the execute method, passing two arguments: the URL to search and the target word to count.The execute method will print the number of occurrences of the target word in the URL.
