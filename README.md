@@ -3,7 +3,7 @@ This program performs a word search in a given URL and counts the number of occu
 
 The code will also run in command line : 
 
-The command to run 
+The command to run    
 java VeracityTechnicalTest.java
 
 Usage       
